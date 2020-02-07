@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="Bootstrap & Jquery/Bootstrap/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="Bootstrap & Jquery/Bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="Bootstrap & Jquery/Bootstrap/css/bootstrap.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="text-right m-2">
+        <a class="button btn btn-primary" href="cart.html">Cart</a>
+    </div>
+    <div class="main">
+        <div class="text-center">
+            <button class="clear btn btn-primary" type="button" onclick="clearCart()">Clear</button>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/placeholder.png" alt="placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Name</h5>
+                            <p class="card-text">Some text about this item</p>
+                            <p class="card-text">10.00</p>
+                            <button type="button" class="btn btn-primary" onclick="collectData(1,'Name1',10.00)">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="images/placeholder.png" alt="placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Name</h5>
+                            <p class="card-text">Some text about this item</p>
+                            <p class="card-text">20.00</p>
+                            <button type="button" class="btn btn-primary" onclick="collectData(2,'Name2',20.00)">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/placeholder.png" alt="placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Name</h5>
+                            <p class="card-text">Some text about this item</p>
+                            <p class="card-text">30.00</p>
+                            <button type="button" class="btn btn-primary" onclick="collectData(3, 'Name3',30.00)">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="images/placeholder.png" alt="placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Name</h5>
+                            <p class="card-text">Some text about this item</p>
+                            <p class="card-text">40.00</p>
+                            <button type="button" class="btn btn-primary" onclick="collectData(4,'Name4',40.00)">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/placeholder.png" alt="placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Name</h5>
+                            <p class="card-text">Some text about this item</p>
+                            <p class="card-text">50.00</p>
+                            <button type="button" class="btn btn-primary" onclick="collectData(5,'Name5',50.00)">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="images/placeholder.png" alt="placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Name</h5>
+                            <p class="card-text">Some text about this item</p>
+                            <p class="card-text">60.00</p>
+                            <button type="button" class="btn btn-primary" onclick="collectData(6,'Name6',60.00)">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="Bootstrap & Jquery/Jquery/Jquery.js"></script>
+    <!-- Popper -->
+    <script src="Bootstrap & Jquery/Bootstrap/popper-js/popper.js"></script>
+    <!-- Bootstrap -->
+    <script src="Bootstrap & Jquery/Bootstrap/js/bootstrap.js"></script>
+    <script src="Bootstrap & Jquery/Bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- cart -->
+    <script src="js/cart1.js"></script>
+</body>
+</html>
