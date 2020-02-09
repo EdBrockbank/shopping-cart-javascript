@@ -52,7 +52,7 @@ function renderCart() {
     } else {
         //looping through the array and making the html syntax for each item in the cart
         cart.forEach(function (item) {
-            var row = "<tr>" + "<td>" + item[0] + "</td>" + "<td>" + item[1] + "</td>" + "<td>" + item[2] + "</td>" + "<td>" + "<button class='btn btn-primary'>Delete</button>" + "</td>" + "</tr>" ;
+            var row = "<tr>" + "<td>" + item[0] + "</td>" + "<td>" + item[1] + "</td>" + "<td>" + item[2] + "</td>" + "<td>" + "<button class='btn btn-primary' onclick='deleteItem("+ item[0] +")'>Delete</button>" + "</td>" + "</tr>" ;
             //appending the syntax to the html table
             $("#cart > tbody").append(row);
         });
@@ -62,4 +62,30 @@ function renderCart() {
 //clears the local storage
 function clearCart() {
     localStorage.clear();
+}
+
+//deletes an item from the list
+function deleteItem(id){
+    //collecting the cart
+    var oldCart = JSON.parse(localStorage.getItem('cart'));
+    var oldIds = JSON.parse(localStorage.getItem('ids'));
+    console.log(oldIds);
+    oldCart.forEach(function (item) {
+        //finding the element to be deleted
+        if (item[0] === id){
+            //starting at the index of the item to be deleted, delete 1 item
+            oldCart.splice(oldCart.indexOf(item),1);
+            //re-setting the cart in local storage
+            localStorage.setItem('cart',JSON.stringify(oldCart));
+        }
+    });
+    //allowing the user to put the item back into the cart using the same method as above
+    oldIds.forEach(function (item) {
+        if (item === id){
+            oldIds.splice(oldIds.indexOf(item),1);
+            localStorage.setItem('ids', JSON.stringify(oldIds));
+        }
+    });
+    //re-loading the page to see the effect take place
+    location.reload();
 }
